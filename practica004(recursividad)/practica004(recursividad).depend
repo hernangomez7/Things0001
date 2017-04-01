@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1491002861 source:c:\users\alumno\desktop\practica004(recursividad)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"factorial1.h"
+
+1491002678 source:c:\users\alumno\desktop\practica004(recursividad)\factorial.c
+
+1491002832 source:c:\users\alumno\desktop\practica004(recursividad)\factorial1.c
+
+1491002841 c:\users\alumno\desktop\practica004(recursividad)\factorial1.h
+
