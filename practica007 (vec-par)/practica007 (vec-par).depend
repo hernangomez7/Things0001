@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1491264847 source:c:\users\alumno\desktop\practica007 (vec-par)\main.c
+	<stdio.h>
+	<stdlib.h>
+
