@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAM 3
+#define TAM 11
+
 
 
 int main()
 {
-    int legajo[TAM],edad[TAM],nota[TAM],aux,flag=0,maximo,promedio,acumulador=0;
+    int legajo[TAM],edad[TAM],nota[TAM],aux,flag=0,maximo,promedio,acumulador=0,flag1=0;
     char respuesta='n';
     while(respuesta=='n')
     {
@@ -41,8 +42,15 @@ int main()
                     {
                       system("cls");
                        printf("%d, %d, %d\n",legajo[i],edad[i],nota[i]);
+                       flag1=1;
                     }
                 }
+                if(flag1==0)
+                {
+                    system("cls");
+                    printf("legajo inexistente\n\n");
+                }
+
             break;
             case 3:
                  for(int i=0;i<TAM-1;i++)
