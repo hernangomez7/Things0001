@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1491864714 source:c:\users\alumno\desktop\clase008\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1491865437 source:c:\users\alumno\desktop\practica008(acomodando arrays)\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1491869887 source:c:\users\alumno\desktop\practica008(acomodando arrays)\funcion.c
+
+1491868409 c:\users\alumno\desktop\practica008(acomodando arrays)\funcion.h
+
