@@ -48,11 +48,11 @@ void mostrarSerie(eSerie);
 void mostrarCliente(eCliente);
 void mostrarSeries(eSerie[],int);
 void mostrarClientes(eCliente[], int);
-
-
 void mostrarClientesConSerie(eCliente[], eSerie[], int, int);
 
+
 void mostrarSeriesConClientes(eCliente[], eSerie[], int, int);
+
 void mostrarSerieLoser(eCliente[], eSerie[], int, int);
 void mostrarClientesTBBT(eCliente[], eSerie[], int, int);
 
@@ -78,16 +78,14 @@ int main()
     printf("idcliente\tnombre\testado\tidserie\n");
     mostrarClientes(clientes, C);
     printf("**********************************************************\n");
-    printf("idcliente\tnombre\testado\tidserie\tnombre-serie\n");
-
+    printf("serie\tidcliente\tnombre\testado\tidserie\n");
     mostrarClientesConSerie(clientes, series, C, S);
-
+    printf("**********************************************************\n");
+    mostrarSeriesConClientes(clientes,series,C,S);
 
 
     /*
-    mostrarClientesConSerie(clientes, series, C,S);
 
-    mostrarSeriesConClientes(clientes,series,C,S);
 
     mostrarSerieLoser(clientes, series,C,S);
     mostrarClientesTBBT(clientes, series,C,S);
@@ -168,12 +166,6 @@ mostrarClientes(eCliente z[],int cantidad)
     mostrarCliente(z[y]);
     }
 }
-
-
-
-
-
-
 void mostrarClientesConSerie(eCliente z [], eSerie x[],int clientes,int series)
 {
     int y,j;
@@ -184,7 +176,7 @@ void mostrarClientesConSerie(eCliente z [], eSerie x[],int clientes,int series)
         {
             if(z[y].idSerie==x[j].idSerie)
             {
-                printf("%s",x[j].titulo);
+                printf("%s\t",x[j].titulo);
             }
 
         }
@@ -193,3 +185,23 @@ void mostrarClientesConSerie(eCliente z [], eSerie x[],int clientes,int series)
     }
 }
 
+
+
+
+void mostrarSeriesConClientes(eCliente z[], eSerie x[], int cliente, int serie)
+{
+    int i,j;
+    for(i=0;i<serie;i++)
+    {
+        printf("\n%s\t",x[i].titulo);
+        for(j=0;j<serie;j++)
+        {
+            if(x[i].idSerie==z[j].idSerie)
+            {
+                printf("%s ",z[j].nombre);
+            }
+
+        }
+         printf("\n");
+    }
+}
