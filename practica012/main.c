@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "funciones.h"
 #define S 5
 #define C 10
@@ -21,7 +22,7 @@ muchos a muchos (Un cliente que ve muchas series)
 
 
 
-void mostrarSerieLoser(eCliente[], eSerie[], int, int);
+
 
 
 
@@ -31,6 +32,7 @@ int main()
     eCliente clientes[C];
     cargarSeries(series);
     cargarClientes(clientes);
+    char nombre[20]={"pedro"};
 /*
     mostrarSerie(series[0]);
     mostrarCliente(clientes[0]);
@@ -49,30 +51,12 @@ int main()
     mostrarClientesTBBT(clientes, series,C,S);
     printf("**********************************************************\n");
     mostrarSerieLoser(clientes, series,C,S);
+    printf("**********************************************************\n");
+    TodasSeriesJuan(clientes, series,C,S);
+    printf("**********************************************************\n");
+    LasSerieNombre(clientes, series,C,S,nombre);
 
 
     return 0;
 }
 
-
-void mostrarSerieLoser(eCliente z[], eSerie x[], int serie, int cliente)
-{
-int i,j,Cont[serie];
-
-
-
-    for(i=0;i<serie;i++)
-    {
-
-    }
-
-
-   /*
-   if(i==0)
-        {
-            min=loser[i].cant
-        }
-        if(min>loser[i]cant);
-   */
-
-}

@@ -35,4 +35,7 @@ void mostrarClientesConSerie(eCliente[], eSerie[], int, int);
 void mostrarSeriesConClientes(eCliente[], eSerie[], int, int);
 
 void mostrarClientesTBBT(eCliente[], eSerie[], int, int);
+void mostrarSerieLoser(eCliente[], eSerie[], int, int);
 
+void TodasSeriesJuan(eCliente[], eSerie[], int, int);
+void LasSerieNombre(eCliente[], eSerie[], int, int, char[]);

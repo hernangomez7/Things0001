@@ -130,3 +130,83 @@ int i,j;
          printf("\n");
     }
 }
+
+void mostrarSerieLoser(eCliente z[], eSerie x[], int cliente, int serie)
+{
+    int i,j,Flag=0,min;
+    eLoser SeriePerdedora[5]={{100,0},{101,0},{102,0},{103,0},{104,0}};
+
+
+    for(i=0;i<serie;i++)
+    {
+        for(j=0;j<cliente;j++)
+        {
+            if(SeriePerdedora[i].idSerie==z[j].idSerie)
+            {
+                SeriePerdedora[i].cont++;
+            }
+        }
+
+    }
+    for(i=0;i<serie;i++)
+    {
+        if(Flag==0)
+        {
+            min=SeriePerdedora[i].cont;
+        }else
+        if(min>SeriePerdedora[i].cont)
+        {
+            min=SeriePerdedora[i].cont;
+        }
+    }
+
+     for(i=0;i<serie;i++)
+    {
+        if(SeriePerdedora[i].cont==min)
+        {
+            mostrarSerie(x[i]);
+        }
+
+    }
+
+}
+
+void TodasSeriesJuan(eCliente z[], eSerie x[], int cliente, int serie)
+{
+    char nombrez[30]={"juan"};
+    int i,j;
+    for(i=0;i<cliente;i++)
+    {
+        if(strcmp(z[i].nombre,nombrez )==0)
+        {
+            for(j=0;j<serie;j++)
+            {
+                if(z[i].idSerie==x[j].idSerie)
+                {
+                    printf("%s\n",x[j].titulo);
+
+                }
+            }
+        }
+    }
+}
+
+void LasSerieNombre(eCliente z[], eSerie x[], int cliente, int serie,char nombrez[])
+{
+    int i,j;
+    for(i=0;i<cliente;i++)
+    {
+        if(strcmp(z[i].nombre,nombrez )==0)
+        {
+            for(j=0;j<serie;j++)
+            {
+                if(z[i].idSerie==x[j].idSerie)
+                {
+                    printf("%s\n",x[j].titulo);
+
+                }
+            }
+        }
+    }
+}
+
