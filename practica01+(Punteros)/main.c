@@ -37,6 +37,10 @@ int main()
     //*P==x
     //una variable puede tener infinitos punteros apuntandolo
     //los punteros puede guardar dirrecciones memoria eje 0x123Af es una dirreccion exadecimal
+    // char letra ='a';
+    //pasamayuscula(&letra)
+    //void pasamayuscula(char*x)
+    //{
 
 
 
