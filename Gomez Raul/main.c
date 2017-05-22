@@ -10,29 +10,29 @@ int main()
 {
     Eprogramador Programen[TAM]={{"carlos","apellido1",10,1150},{"agustin","apellido2",11,1101},{"marlon","apellido3",12,1102},{"estela","apellido4",10,1103},{"marta","apellido5",10,1104},{"vera","apellido6",12,1105},{"ana","apellido7",11,1106},{"cristo","apellido8",11,1107},{"elisa","apellido9",12,1108},{"paola","apellido10",12,1109}};
     Eproyecto proyects[TAM2]={{"proyecto1",1},{"proyectoDOS",2},{"proyectoDIOS",3},{"proyectoX",4},{"proyecto-Origen",5}};
-    Ecategoria category[3]={{"Junior",10,400},{"Semi-Junior",11,935},{"Senior",12,1350}};
+    Ecategoria category[3]={{"Junior",10,75},{"Semi-Junior",11,140},{"Senior",12,240}};
     EproyProg ReProyProg[TAM3]={{3,1150,4},{1,1101,4},{2,1150,2},{2,1102,4},{2,1103,4},{3,1103,4},{5,1104,4},{3,1105,2},{4,1105,2},{1,1106,4},{4,1107,2},{2,1107,2},{5,1108,4},{5,1109,4}};
     char seguir='s';
-    int opcion=0;
+    int opcion;
 
     /////varibles/////
 
     do
     {
-        printf("1- Alta programdor\n");
-        printf("2- modificar dator de pro.\n");
-        printf("3- Baja de Programador\n");
-        printf("4- Asignar programador a proyecto\n");
-        printf("5- Listado de programadores\n");
-        printf("6- Listador de todos los proyector\n");
-        printf("7- Listador de proyectos mediante id programador\n");
-        printf("8- proyectode mandante\n");
-        printf("9-  Listado de todos los proyectos (nombre) y costo\n");
-        printf("10- Salir\n");
-
-
-        scanf("%d",&opcion);
-
+        do
+        {
+            printf("1- Alta programdor\n");
+            printf("2- modificar dator de pro.\n");
+            printf("3- Baja de Programador\n");
+            printf("4- Asignar programador a proyecto\n");
+            printf("5- Listado de programadores\n");
+            printf("6- Listador de todos los proyector\n");
+            printf("7- Listador de proyectos mediante id programador\n");
+            printf("8- proyectode mandante\n");
+            printf("9-  Listado de todos los proyectos (nombre) y costo\n");
+            printf("10- Salir\n");
+            scanf("%d",&opcion);
+        }while(opcion>10||opcion<0);
         switch(opcion)
         {
             case 1:
