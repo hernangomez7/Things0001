@@ -176,3 +176,17 @@ void ListProyIDprog(Eprogramador [],Eproyecto [],EproyProg [],int ,int ,int );
  *
  */
 void ProyectoDeman(Eproyecto[],EproyProg [],int ,int );
+/////////////////////////////////
+/** \brief Enlista los proyectos con sus respectivos costos.
+ *
+ * \param   estructura de programadores.
+ * \param   estructura de proyectos.
+ * \param   estructura de categoria.
+ * \param   estructura de programadores y proyectos relacionados.
+ * \param   maxima cantidad de programadores.
+ * \param   maxima cantidad de proyectos.
+ * \param   maxima cantidad de relaciones programadores y proyectos.
+ * \return  void
+ *
+ */
+void ListProyectscost(Eprogramador [],Eproyecto [],Ecategoria [],EproyProg [],int ,int ,int );

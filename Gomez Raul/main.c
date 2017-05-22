@@ -27,7 +27,8 @@ int main()
         printf("6- Listador de todos los proyector\n");
         printf("7- Listador de proyectos mediante id programador\n");
         printf("8- proyectode mandante\n");
-        printf("9- Salir\n");
+        printf("9-  Listado de todos los proyectos (nombre) y costo\n");
+        printf("10- Salir\n");
 
 
         scanf("%d",&opcion);
@@ -60,9 +61,13 @@ int main()
                 ProyectoDeman(proyects,ReProyProg,TAM2,TAM3);
             break;
             case 9:
+                ListProyectscost(Programen,proyects,category,ReProyProg,TAM,TAM2,TAM3);
+            break;
+            case 10:
                 seguir = 'n';
             break;
         }
     }while(seguir=='s');
     return 0;
 }
+//Listado de todos los proyectos (nombre) y lo que tengo que pagar por los proyectos

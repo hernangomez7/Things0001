@@ -654,6 +654,46 @@ void ProyectoDeman(Eproyecto A[],EproyProg B[],int max,int max2)
     }
 }
 
-
+void ListProyectscost(Eprogramador A[],Eproyecto B[],Ecategoria C[],EproyProg D[],int max,int max2,int max3)
+{
+    system("cls");
+    int i,j,x,z,flag=0;
+    float acum=0,pagoXH;
+    for(i=0;i<max2;i++)
+    {
+        if(B[i].idProyecto>0)
+        {
+            printf("nombre de proyecto= %s\n",B[i].nombre);
+            printf("id de proyecto= %d\n",B[i].idProyecto);
+            for(j=0;j<max3;j++)
+            {
+                if(B[i].idProyecto==D[j].idProyecto)
+                {
+                    for(x=0;x<max;x++)
+                    {
+                     if(D[j].idProgramador==A[x].idProgramador)
+                     {
+                         for(z=0;z<3;z++)
+                         {
+                             if(A[x].idCategoria==C[z].idCategoria)
+                             {
+                                pagoXH=C[z].PagoXhora;
+                                acum=acum+(pagoXH*D[j].horaTrab);
+                                flag=1;
+                             }
+                         }
+                     }
+                    }
+                }
+            }
+            if(flag==1)
+            {
+                printf("costo de proyecto %.2f $\n\n",acum);
+                acum=0;
+                flag=0;
+            }
+        }
+    }
+}
 
 
