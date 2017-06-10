@@ -16,7 +16,7 @@ int main()
     int anio1;
     int mes1;
     int dia1;
-    int acumulador;
+    int acumulador=0;
     int anioSys;
     int diaSys;
     int mesSys;
@@ -39,7 +39,7 @@ int main()
     printf("ingrese año: ");
     scanf("%d",&anio1);
 
-     acumulador=calcularPrin(dia1,mes1,anio1);
+     acumulador=acumulador+calcularPrin(dia1,mes1,anio1);
      acumulador=acumulador+intermedioxAnios(anio1,anioSys);
      acumulador=acumulador+calcFinal(dia1,mes1,diaSys,mesSys,anioSys);
      printf("dias vividos %d",acumulador);
@@ -87,9 +87,10 @@ int calcularPrin(int dia,int mes,int anio)
 int intermedioxAnios(int anio,int anioSys)
 {
     int acumulador=0,i;
+    anio=anio+1;
     for(i=anio;i<anioSys;i++)
     {
-        acumulador=acumulador+365;
+        acumulador+=365;
          if(i % 4 == 0 && (i % 100 != 0 || i % 400 == 0))
         {
             acumulador=acumulador+1;
