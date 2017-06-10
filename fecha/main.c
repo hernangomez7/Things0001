@@ -40,7 +40,9 @@ int main()
     scanf("%d",&anio1);
 
      acumulador=acumulador+calcularPrin(dia1,mes1,anio1);
+     printf("primer suma =%d",acumulador);
      acumulador=acumulador+intermedioxAnios(anio1,anioSys);
+     printf("primer suma =%d",acumulador);
      acumulador=acumulador+calcFinal(dia1,mes1,diaSys,mesSys,anioSys);
      printf("dias vividos %d",acumulador);
 
@@ -103,12 +105,14 @@ int calcFinal(int dia1,int mes1,int diaSys,int mesSys,int anioSys)
 {
     int acumulador=0;
     int i;
-    acumulador+=diaSys;
-    if(anioSys % 4 == 0 && (anioSys % 100 != 0 || anioSys % 400 == 0))
-        {
-            acumulador=acumulador+1;
-        }
-    for(i=mes1;i<mesSys;i++)
+    acumulador=acumulador+diaSys-1;
+
+    if(mesSys % 4 == 0 && (mesSys % 100 != 0 || mesSys % 400 == 0))
+        if(mesSys>2)
+            {
+                acumulador=acumulador+1;
+            }
+    for(i=0;i<mesSys-1;i++)
     {
         if(i==0||i==2||i==4||i==6||i==7||i==9||i==11)
         {
