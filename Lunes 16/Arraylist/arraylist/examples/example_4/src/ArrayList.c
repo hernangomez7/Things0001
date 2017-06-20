@@ -308,7 +308,7 @@ int al_push(ArrayList* pList, int index, void* pElement)//ver 80%
     int returnAux = -1;
      if(pList != NULL && pElement != NULL  )
     {
-        if(index>=0 && index< pList->size)
+        if(index>=0 && index<= pList->size)
         {
          if( expand(pList,index) == 0 )
             {
@@ -456,16 +456,17 @@ int al_containsAll(ArrayList* pList,ArrayList* pList2)
 
     if(pList != NULL && pList2 != NULL)
     {
-        for(i=0 ; i<pList->size ; i++)
+        for(i=0 ; i<pList2->size ; i++)
         {
-           if(pList->pElements[i] == pList2->pElements[i] )
+           if(al_contains(pList,pList2->pElements[i])==1 )
                 {
                     returnAux=1;
-                    break;
+
                 }
                 else
                 {
                     returnAux=0;
+                     break;
                 }
         }
     }
@@ -486,38 +487,33 @@ int al_sort(ArrayList* pList, int  (*pFunc)(void* ,void*), int order)
     void** pElemntesaux;
     int returnAux = -1;
 
-    if(pList!=NULL && pFunc!=NULL && order>=0 && order<2)
+    if(pList!=NULL && pFunc!=NULL && (order==0 || order==1))
     {
-        if(order==1)
-        {
-            for(i=0;i<(pList->size-1);i++)
+            for(i=0;i<pList->size-1;i++)
             {
-                for(j=0;j<(pList->size);j++)
+                for(j=i+1;j<pList->size;j++)
                 {
-                    if(1==pFunc(pList->pElements[i],pList->pElements[j]))
+                    if(order==1)
                     {
-                        pElemntesaux=pList->pElements[i];
-                        pList->pElements[i]=pList->pElements[j];
-                        pList->pElements[j]=pElemntesaux;
+                       if(1==pFunc(pList->pElements[i],pList->pElements[j]))
+                        {
+                            pElemntesaux=pList->pElements[i];
+                            pList->pElements[i]=pList->pElements[j];
+                            pList->pElements[j]=pElemntesaux;
+                        }
+                    }
+                    else
+                    {
+                        if(-1==pFunc(pList->pElements[i],pList->pElements[j]))
+                        {
+                            pElemntesaux=pList->pElements[i];
+                            pList->pElements[i]=pList->pElements[j];
+                            pList->pElements[j]=pElemntesaux;
+                        }
                     }
                 }
             }
-        }
-         if(order==0)
-        {
-            for(i=0;i<(pList->size-1);i++)
-            {
-                for(j=0;j<(pList->size);j++)
-                {
-                    if(-1==pFunc(pList->pElements[i],pList->pElements[j]))
-                    {
-                        pElemntesaux=pList->pElements[i];
-                        pList->pElements[i]=pList->pElements[j];
-                        pList->pElements[j]=pElemntesaux;
-                    }
-                }
-            }
-        }
+
         returnAux =0;
     }
 
@@ -560,7 +556,7 @@ int expand(ArrayList* pList,int index)
     int returnAux = -1;
     int i;
 
-    if( pList != NULL && index >=0 && index < pList->size )
+    if( pList != NULL && index >=0 && index <= pList->size )
     {
           if(pList->size == pList->reservedSize)
           {
