@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1497918098 source:c:\users\alumno\desktop\arraylist-exp\array-list.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"array-list.h"
+
+1497920149 c:\users\alumno\desktop\arraylist-exp\array-list.h
+
+1497919909 source:c:\users\alumno\desktop\arraylist-exp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"array-list.h"
+
