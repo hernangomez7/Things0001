@@ -13,3 +13,23 @@
 	<string.h>
 	"array-list.h"
 
+1497920721 source:c:\users\alumno\desktop\arraylist-exp-trabj\array-list.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"array-list.h"
+
+1498258452 c:\users\alumno\desktop\arraylist-exp-trabj\array-list.h
+
+1498261338 source:c:\users\alumno\desktop\arraylist-exp-trabj\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"array-list.h"
+
+1498261010 source:c:\users\alumno\desktop\arraylist-exp-trabj\fucniones.c
+	"funciones.h"
+
+1498261021 c:\users\alumno\desktop\arraylist-exp-trabj\funciones.h
+

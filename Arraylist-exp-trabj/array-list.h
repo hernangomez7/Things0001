@@ -26,10 +26,7 @@ struct ArrayList{
 #endif
 
 
-struct
-{
-    int dni;
-}Eturnos;
+
 
 /** \brief Allocate a new arrayList with AL_INITIAL_VALUE elements.
  * \param void
