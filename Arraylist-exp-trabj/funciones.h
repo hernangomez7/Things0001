@@ -7,3 +7,5 @@ typedef struct
 
 
 int agregarTurgente(Eturnos*,int );
+
+int escritorEstruc(Eturnos*);

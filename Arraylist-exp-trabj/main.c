@@ -5,7 +5,7 @@
 #include "array-list.h"
 
 
-
+int adicionardorDATOS(ArrayList* );
 
 
 int main()
@@ -45,6 +45,13 @@ int main()
     }
     fclose(f);
 
+
+    very=adicionardorDATOS(Turgernte );
+    if(very!=0)
+    {
+        printf("error al leer arraylist");
+    }
+
     do
     {
         very=1;
@@ -54,6 +61,8 @@ int main()
         printf("4_Mostrar lista.\n");
         printf("5_Mostrar informacion.\n");
         printf("6_Salir.\n");
+        printf("7_print arralys '0'.\n");
+        printf("8_print arralys '1'.\n");
 
         scanf("%d",&opcion);
 
@@ -66,8 +75,11 @@ int main()
                 {
                     printf("error al agregar al arraylist");
                 }
-//                turnoAux2=(Eturnos*)Turgernte->get(Turgernte,0);
-//                printf("%d",turnoAux2->turno);
+                very = escritorEstruc(turnoAux);
+                if(very!=0)
+                {
+                    printf("error al escribir los datos");
+                }
             break;
             case 2:
             break;
@@ -80,10 +92,56 @@ int main()
             case 6:
                 seguir='n';
             break;
+            case 7:
+                turnoAux2=(Eturnos*)Turgernte->get(Turgernte,0);
+                printf("DNI: %d\n",turnoAux2->dni);
+                printf("turno: %d\n",turnoAux2->turno);
+                printf("typo: %s\n",turnoAux2->tipo);
+            break;
+            case 8:
+                turnoAux2=(Eturnos*)Turgernte->get(Turgernte,1);
+                printf("DNI: %d\n",turnoAux2->dni);
+                printf("turno: %d\n",turnoAux2->turno);
+                printf("typo: %s\n",turnoAux2->tipo);
+            break;
         }
     }while(seguir=='s');
 
         return 0;
+}
+
+int adicionardorDATOS(ArrayList* arrayLT)
+{
+    system("cls");
+    int x;
+    int cont=1;
+    FILE* lector;
+    Eturnos* adturn;
+    adturn =(Eturnos*) malloc(sizeof(Eturnos)*1);
+    if(adturn==NULL)
+    {
+        printf("fatal error");
+    }
+
+
+    lector=fopen("datos.bin","rb+");
+    if(lector==NULL)
+    {
+        printf("\nno se pudo leer archivo\n");
+    }
+
+        while(!feof(lector))
+        {
+            adturn= malloc(sizeof(Eturnos));
+            if((fread(adturn,sizeof(Eturnos),1,lector))==1)
+            {
+                {
+                    al_add(arrayLT,adturn);
+                }
+            }
+        }
+    fclose(lector);
+    return x;
 }
 
 
