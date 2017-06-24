@@ -5,7 +5,7 @@
 #include "array-list.h"
 
 
-int adicionardorDATOS(ArrayList* );
+
 
 
 int main()
@@ -63,6 +63,7 @@ int main()
         printf("6_Salir.\n");
         printf("7_print arralys '0'.\n");
         printf("8_print arralys '1'.\n");
+        printf("9_escritor  '1'.\n");
 
         scanf("%d",&opcion);
 
@@ -74,11 +75,6 @@ int main()
                 if(very!=0)
                 {
                     printf("error al agregar al arraylist");
-                }
-                very = escritorEstruc(turnoAux);
-                if(very!=0)
-                {
-                    printf("error al escribir los datos");
                 }
             break;
             case 2:
@@ -104,44 +100,12 @@ int main()
                 printf("turno: %d\n",turnoAux2->turno);
                 printf("typo: %s\n",turnoAux2->tipo);
             break;
+            case 8:
+                printf("8_print arralys '1'.\n");
+            break;
+
         }
     }while(seguir=='s');
 
         return 0;
 }
-
-int adicionardorDATOS(ArrayList* arrayLT)
-{
-    system("cls");
-    int x;
-    int cont=1;
-    FILE* lector;
-    Eturnos* adturn;
-    adturn =(Eturnos*) malloc(sizeof(Eturnos)*1);
-    if(adturn==NULL)
-    {
-        printf("fatal error");
-    }
-
-
-    lector=fopen("datos.bin","rb+");
-    if(lector==NULL)
-    {
-        printf("\nno se pudo leer archivo\n");
-    }
-
-        while(!feof(lector))
-        {
-            adturn= malloc(sizeof(Eturnos));
-            if((fread(adturn,sizeof(Eturnos),1,lector))==1)
-            {
-                {
-                    al_add(arrayLT,adturn);
-                }
-            }
-        }
-    fclose(lector);
-    return x;
-}
-
-

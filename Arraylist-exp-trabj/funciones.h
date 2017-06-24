@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "array-list.h"
+
 typedef struct
 {
     int dni;
@@ -8,4 +13,6 @@ typedef struct
 
 int agregarTurgente(Eturnos*,int );
 
-int escritorEstruc(Eturnos*);
+int escritorArraylist(ArrayList* );
+
+int adicionardorDATOS(ArrayList* );

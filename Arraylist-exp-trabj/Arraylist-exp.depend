@@ -21,16 +21,20 @@
 
 1498258452 c:\users\alumno\desktop\arraylist-exp-trabj\array-list.h
 
-1498265069 source:c:\users\alumno\desktop\arraylist-exp-trabj\main.c
+1498265835 source:c:\users\alumno\desktop\arraylist-exp-trabj\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"funciones.h"
 	"array-list.h"
 
-1498262544 source:c:\users\alumno\desktop\arraylist-exp-trabj\fucniones.c
+1498265778 source:c:\users\alumno\desktop\arraylist-exp-trabj\fucniones.c
 	"funciones.h"
 	<stdio.h>
 
-1498262485 c:\users\alumno\desktop\arraylist-exp-trabj\funciones.h
+1498265589 c:\users\alumno\desktop\arraylist-exp-trabj\funciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"array-list.h"
 
