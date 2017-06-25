@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1498251950 source:c:\users\axle\desktop\arraylist-exp-trabj(semi_final)\array-list.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"array-list.h"
+
+1498251950 c:\users\axle\desktop\arraylist-exp-trabj(semi_final)\array-list.h
+
+1498423074 source:c:\users\axle\desktop\arraylist-exp-trabj(semi_final)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"array-list.h"
+
+1498423041 c:\users\axle\desktop\arraylist-exp-trabj(semi_final)\funciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"array-list.h"
+
+1498423040 source:c:\users\axle\desktop\arraylist-exp-trabj(semi_final)\fucniones.c
+	"funciones.h"
+	<stdio.h>
+
